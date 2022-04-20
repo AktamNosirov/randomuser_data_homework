@@ -21,3 +21,5 @@ import json
 dat=open("randomuser_data.json").read()
 data=json.loads(dat)   
 print(get_count_users(data))
+
+
