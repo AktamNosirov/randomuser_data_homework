@@ -12,21 +12,23 @@ def get_gender_users(data:dict) -> list:
         list: users get gender list
     """
     a=[]
-    b={"Male":0 ,"Female":0 }
+   
+    
     data=data['results']
     for i in data :       
-        a.append(i["gender"])
+        if i["gender"]=="male":
+            a.append({"Male" : 1})
+        else:
+            a.append({"Female" : 0})  
+        
    
-    b["Male"]=a.count("male")
-    b["Female"]=a.count("female")
    
-    return  b
+   
+    return a 
 import json
 dat=open("randomuser_data.json").read()
 data=json.loads(dat)   
 print(get_gender_users(data))
-
-
 
 
 
