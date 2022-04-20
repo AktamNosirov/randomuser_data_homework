@@ -12,3 +12,4 @@ def get_users_data(data:dict) -> list:
     Returns:
         list: users data list
     """
+    
