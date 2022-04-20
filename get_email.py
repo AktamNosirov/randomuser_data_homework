@@ -13,11 +13,11 @@ def get_email(data:dict) -> list:
     a=[]
     data=data['results']
     for i in data :       
-        a+=i.get("email")
+        a.append(i["email"])
     
-
     
-    return a 
+    
+    return a
 
 import json
 dat=open("randomuser_data.json").read()
